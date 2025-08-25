@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChronosFit Turnos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="logo.png" alt="ChronosFit logo" class="logo" />
+      <h1>Reservar Clases</h1>
+    </header>
+    <main>
+      <section class="user-inputs">
+        <label>
+          Nombre
+          <input type="text" id="nameInput" placeholder="Ingresa tu nombre" />
+        </label>
+        <label>
+          Celular (WhatsApp)
+          <input
+            type="tel"
+            id="phoneInput"
+            placeholder="Ej. +54 9 2616 123456"
+          />
+        </label>
+      </section>
+      <section class="schedule">
+        <h2>Seleccione sus horarios</h2>
+        <ul id="timeSlots" class="time-slots"></ul>
+      </section>
+      <button id="reserveBtn" disabled>Reservar</button>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Confirmar Reserva</h3>
+        <p id="modalSummary"></p>
+        <button id="confirmBtn">Confirmar</button>
+        <button id="closeBtn">Cancelar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
